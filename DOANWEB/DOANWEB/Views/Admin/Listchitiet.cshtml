@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DOANWEB.Models.CHITIETDONHANG>
+@{
+    ViewBag.Title = "Listchitiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Quản Lý Đơn Hàng</h2>
+
+<table class="table">
+    <tr>
+        <th> Mã Đơn </th>
+        <th> Mã Sản Phẩm</th>
+        <th> Số Lượng </th>
+        <th> Giá</th>
+      
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.MaDon)</td>
+        <td>@Html.DisplayFor(modelItem => item.masp)</td>
+        <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
+        <td>@Html.DisplayFor(modelItem => item.Gia)</td>
+
+    </tr>
+    }
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index","Admin")
+</div>
+

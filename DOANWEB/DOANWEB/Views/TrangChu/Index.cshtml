@@ -1,0 +1,812 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/TrangChu/head.cshtml";
+}
+
+<style>
+    .btn a{
+        text-decoration:none;
+    }
+</style>
+
+<body>
+    <!-- menu header -->
+    <div class="header">
+
+        <div class="navbar">
+            <div class="navbar__left">
+
+
+
+                <div style="justify-content: space-between;" class="navbar__menu">
+                    <i id="bars" class="fa fa-bars" aria-hidden="true"></i>
+                    <ul>
+                        <li>@Html.ActionLink("Trang chủ", "Index", "TrangChu")</li>
+                        <li>@Html.ActionLink("Thông tin sản phẩm", "Index", "SanPham")</li>
+                        <li>@Html.ActionLink("Đăng Ký", "DangKy", "NguoiDung")</li>
+                        <li>@Html.ActionLink("Đăng Nhập", "DangNhap", "NguoiDung")</li>
+                        
+                        <li>@Html.Partial("~/Views/GioHang/GioHangPartial.cshtml")</li>
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        <li>@Html.ActionLink("admin", "Index", "Admin")</li>
+
+                    </ul>
+
+                    
+
+                </div>
+
+            </div>
+
+            <div class="navbar__center">
+                <form action="" method="GET" class="navbar__search">
+                    <input type="text" value="" placeholder="Tìm sản phẩm" name="txtsearch" class="search" required>
+                    <i class="fa fa-search" id="searchBtn"></i>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- tao anh chuyen dong -->
+    <div class="post-slider">
+        <i class="fa fa-chevron-left prev" aria-hidden="true"></i>
+        <i class="fa fa-chevron-right next" aria-hidden="true"></i>
+
+        <div class="post-wrapper">
+            <div class="post">
+                <img src="~/Content/images/banner 2.jpg" alt="">
+            </div>
+            <div class="post">
+              <img src="~/Content/images/banner-moi-2021-3.jpg" >
+            </div>
+            <div class="post">
+                <img src="~/Content/images/banner3.png">
+            </div>
+    </div>
+
+    <!-- san pham noi bat -->
+                <div class="body">
+
+                    <div class="body__mainTitle">
+                        <h2>SẢN PHẨM MỚI</h2>
+                    </div>
+
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-2_5 col-md-4 col-6">
+
+                                <a href="/SanPham/Detail/1" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/sofa da bò.jpg">
+                                    </div>
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Sofa da bò Ý 100% da thật
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        20 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/1">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+
+                            </div>
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/4" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/bàn trà.jpg" alt="">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Bàn Trà Mặt Đá-BT21
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        3 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/4">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/6" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/he-tu-bep-da-nang-bang-go-cong-nghiep-ghs-51755-1.jpg" alt="" class="a">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Hệ tủ bếp đẹp bằng gỗ công nghiệp GHS-51785
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        15 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/6">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/5" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/khai-niem-tu-quan-ao-noi-that-dang-khoa.jpg" alt="">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Tủ áo cửa lùa 3 cánh – TQADK10
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        20 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/5">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/4" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/giuong-ngu-bang-go-kieu-nhat-ghs-9234-ava.jpg" alt="">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Giường ngủ bằng gỗ kiểu Nhật GHS-9234
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        8 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/4">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!-- all san pham -->
+
+                <div class="body">
+
+
+                    <div class="body__mainTitle">
+                        <h2>TẤT CẢ SẢN PHẨM</h2>
+                    </div>
+
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/1" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/sofa da bò.jpg">
+                                    </div>
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Sofa da bò Ý 100% da thật
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        20 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/1">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/2" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/he-bep-module-go-thiet-ke-thong-minh-ghs-51848-ava.jpg">
+                                    </div>
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Hệ bếp module gỗ thiết kế thông minh GHS-
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        10 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/2">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/3" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/giuong-ngu-bang-go-kieu-nhat-ghs-9234-ava.jpg" alt="">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Giường ngủ bằng gỗ kiểu Nhật GHS-9234
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        8 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/3">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/4" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/bàn trà.jpg" alt="">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Bàn Trà Mặt Đá-BT21
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        3 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/4">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/5" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" height="300px" src="~/Content/images/khai-niem-tu-quan-ao-noi-that-dang-khoa.jpg" alt="">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Tủ áo cửa lùa 3 cánh – TQADK10
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        20 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/5">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/6" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/he-tu-bep-da-nang-bang-go-cong-nghiep-ghs-51755-1.jpg" alt="" class="a">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Hệ tủ bếp đẹp bằng gỗ công nghiệp GHS-51785
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        15 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/6">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/7" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/5c0785c90a346_1543996873.jpg" alt="">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Tủ quần áo sang trọng kết cấu chắc chắn GHS-51508
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        15 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/7">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/8" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/he-tu-bep-dep-bang-go-cong-nghiep-ghs--2.jpg" alt="" class="a">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Hệ tủ bếp đẹp bằng gỗ công nghiệp GHS-
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        11 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Details/8">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/9" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/gn34.jpg" alt="" class="a">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Giường Ngủ - GN34
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        10 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/10">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="#" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/harmony.jpg" />
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Tủ áo Harmony
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        9 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/10">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/11" class="product">
+                                    <div class="product__img">
+
+                                        <img height="300px" src="~/Content/images/tu ly.jpg" />
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Tủ ly Bridge gỗ màu tự nhiên
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        50 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/11">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/12" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/sp12.jpg" alt="" class="a">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Giường hộc kéo Iris 1m8 Stone
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        20 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/12">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/13" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/giuong keo iris.jpg" alt="" class="a">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Giường hộc kéo Iris 1m8 Stone
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        20 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/13">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/14" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/sp14.jpg" alt="" class="a">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Bàn ăn Jazz 1m6
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        18 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/14">Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2_5 col-md-4 col-6">
+                                <a href="/SanPham/Detail/15" class="product">
+                                    <div class="product__img">
+                                        <img height="300px" src="~/Content/images/sp15.jpg" alt="" class="a">
+                                    </div>
+
+
+                                    <div class="product__content">
+                                        <div class="product__title">
+                                            Tủ bếp Fancy
+                                        </div>
+
+                                        <div class="product__pride">
+                                            <div class="product__pride-newPride">
+                                                <span class="Price">
+                                                    <bdi>
+                                                        25 000 000&nbsp;
+                                                        <span class="currencySymbol">₫</span>
+                                                    </bdi>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="btn btn-success">
+                                    <a href="/SanPham/Detail/15"> Chi Tiết Sản Phẩm</a>
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+    <div class="go-to-top"><i class="fas fa-chevron-up"></i></div>
+    <footer>
+
+
+        <div class="footer__info">
+
+            <div class="footer__info-content">
+                <h3>Trung tâm trợ giúp</h3>
+                <p>Cửa hàng nội thất Hutech</p>
+                <p>Hướng dẫn mua hàng</p>
+            </div>
+
+
+
+            <div class="footer__info-content">
+                <h3>Theo dõi</h3>
+                <div>
+                    <a href="https://www.facebook.com/TranHoangRinh.dvfb.web" class="footer-item-link">
+                        <i class="footer-item__icon fab fa-facebook"></i>
+                        Facebook
+                    </a>
+                </div>
+
+                <div>
+                    <a href="" class="footer-item-link">
+                        <i class="footer-item__icon fab fa-instagram-square"></i>
+                        Instagram
+                    </a>
+                </div>
+
+
+                <div>
+                    <a href="" class="footer-item-link">
+                        <i class="footer-item__icon fa-solid fa-phone"></i>
+                        0915728524
+                </div>
+
+
+
+            </div>
+
+            <div class="footer__info-content">
+                <h3>Chăm sóc khách hàng</h3>
+                <p>Hỗ trợ đổi sản phẩm</p>
+                <p>Phản hồi</p>
+            </div>
+
+        </div>
+
+
+    </footer>
+    <script src="~/Content/jquerymin.js"></script>
+    <script src="~/Content/slickmin.js"></script>
+    <script>
+        //Slider using Slick
+        $(document).ready(function () {
+            $('.post-wrapper').slick({
+                slidesToScroll: 1,
+                autoplay: true,
+                arrow: true,
+                dots: true,
+                autoplaySpeed: 5000,
+                prevArrow: $('.prev'),
+                nextArrow: $('.next'),
+                appendDots: $(".dot"),
+            });
+        });
+    </script>
+
+    <script src="~/Content/script.js"></script>
+
+
+
+
+
+</body>
+</html>
+

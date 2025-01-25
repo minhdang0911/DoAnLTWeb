@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "XacnhanDonhang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="text-align:center;">
+    <h1>Thank you!</h1>
+    <h3>Chúng tôi sẽ giao hàng nhanh nhất có thể cho bạn</h3>
+    <li class="lino">Bạn sẽ chuyển sang trang chủ sau <span id="time">10</span> giây nữa<br /> <a href="/" onclick="reload();" id="reloadlink" title=""><a> </li>
+    <script type="text/javascript">var jgt = 10; document.getElementById('time').innerHTML = jgt; function stime() { document.getElementById('time').innerHTML = jgt; jgt = jgt - 1; if (jgt == 0) { clearInterval(timing); location = '/TrangChu/Index'; } } var timing = setInterval("stime();", 1000);</script>
+
+</div>
+
+
+
+<!--><style>
+    .checkoutsuccess {
+        width: 300px;
+        height: 270px;
+        background-color: #fff;
+        border: 1px solid black;
+        margin-left: 450px;
+        margin-top: 200px;
+    }
+
+    .check {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-color: green;
+    }
+
+        .check img {
+            margin-left: 120px;
+            width: 60px;
+            height: 60px;
+        }
+
+    .done {
+        width: 150px;
+        height: 20px;
+        background-color: blue;
+        color: #fff;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="checkoutsuccess">
+            <div class="check">
+                <img src="~/Content/images/iconn.JPG">
+            </div>
+            <h3>Bạn đã đặt hàng thành công </h3>
+            <p>Chúng tôi sẽ giao hàng sớm nhất cho bạn</p>
+            <p>Cảm ơn bạn đã ủng hộ</p>
+            <a class="btn btn-success" href="@Url.Action("Index", "TrangChu")">Done</a>
+        </div>
+    </div>
+
+
+
+</body>--
+
